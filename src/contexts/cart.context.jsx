@@ -1,6 +1,11 @@
 import { createContext, useState } from 'react';
 
 export const addCartItem = (cartItems, productToAdd) => {
+alert("hey");
+  console.log("here1a");
+    console.log(cartItems);
+    console.log(productToAdd);
+    console.log("here2a");
   const existingCartItem = cartItems.find(
     (cartItem) => cartItem.id === productToAdd.id
   );
@@ -13,7 +18,10 @@ export const addCartItem = (cartItems, productToAdd) => {
     );
   }
 
-  return [...cartItems, { ...productToAdd, quantity: 1 }];
+  console.log("e");
+  console.log(cartItems);
+  console.log(productToAdd);
+  return [...cartItems, { ...productToAdd, quantity: 1 } ];
 };
 
 export const CartContext = createContext({

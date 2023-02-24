@@ -16,7 +16,7 @@ const firebaseConfig = {
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
-alert("got here");
+alert("got here 2");
 const provider = new GoogleAuthProvider();
 
 provider.setCustomParameters({
@@ -27,9 +27,9 @@ provider.setCustomParameters({
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
-
+  alert("2");
   console.log(userAuth);
 };
 
 export const auth = getAuth();
-export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+export const signInWithGooglePopup = () => {signInWithPopup(auth, provider); alert("3");}
